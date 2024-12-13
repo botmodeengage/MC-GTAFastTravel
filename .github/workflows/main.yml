@@ -27,10 +27,15 @@ jobs:
       - name: Build with Maven
         run: mvn clean package
 
-      # Step 4: Upload the built .jar as a release asset using softprops/action-gh-release
+      # Step 4: Get version from pom.xml
+      - name: Get version from pom.xml
+        id: get_version
+        run: echo "VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
+
+      # Step 5: Upload the built .jar as a release asset using softprops/action-gh-release
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-          files: target/mc-gtafasttravel-1.0.1.jar  # Adjust the path and filename as needed
+          files: target/mc-gtafasttravel-${{ env.VERSION }}.jar  # Adjust the path and filename as needed
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
