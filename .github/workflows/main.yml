@@ -36,6 +36,6 @@ jobs:
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v1
         with:
-          files: target/mc-gtafasttravel-${{ env.VERSION }}.jar  # Adjust the path and filename as needed
+          files: target/mc-gtafasttravel-${{ env.VERSION }}.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
