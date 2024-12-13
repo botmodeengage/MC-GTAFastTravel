@@ -6,7 +6,7 @@
 
     <groupId>com.github.botmodeengage</groupId>
     <artifactId>mc-gtafasttravel</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <name>MC-GTAFastTravel</name>
     <description>A Fast Travel plugin for GTA in Minecraft</description>
@@ -38,6 +38,12 @@
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>3.0.2</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>io.papermc</groupId>
             <artifactId>paperlib</artifactId>
@@ -76,6 +82,27 @@
                         <relocation>
                             <pattern>io.papermc.lib</pattern>
                             <shadedPattern>porker.fasttravel.paperlib</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <relocations>
+                        <relocation>
+                            <pattern>org.bstats</pattern>
+                            <shadedPattern>com.github.botmodeengage.mc-gtafasttravel</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
