@@ -1,0 +1,28 @@
+name: FastTravel
+main: porker.fasttravel.FastTravelPlugin
+version: 1.0.0
+api-version: 1.20
+author: YourName
+commands:
+  ft:
+    usage: /ft <destinationPlayer | x y z | player1 player2 | PlayerD x y z>
+    description: Initiate a fast travel.
+    permission: fasttravel.use
+  fta:
+    usage: /fta <player>
+    description: Request to fast travel to another player.
+    permission: fasttravel.use
+  ftc:
+    usage: /ftc
+    description: Cancel current fast travel.
+    permission: fasttravel.use
+  ftaccept:
+    usage: /ftaccept
+    description: Accept an FTA request.
+    permission: fasttravel.use
+  ftdeny:
+    usage: /ftdeny
+    description: Deny an FTA request.
+    permission: fasttravel.use
+softdepend: [ ProtocolLib
+              - Citizens ]
