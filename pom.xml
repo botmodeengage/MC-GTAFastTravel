@@ -17,6 +17,10 @@
 
     <repositories>
         <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
             <id>papermc-old</id>
             <url>https://papermc.io/repo/repository/maven-public/</url>
         </repository>
@@ -35,6 +39,11 @@
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>com.github.botmodeengage</groupId>
+            <artifactId>MC-GTAFastTravel</artifactId>
+            <version></version>
+        </dependency>
         <dependency>
             <groupId>io.papermc</groupId>
             <artifactId>paperlib</artifactId>
