@@ -1,19 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>porker.gtatravel</groupId>
+    <groupId>com.github.botmodeengage</groupId>
     <artifactId>MC-GTAFastTravel</artifactId>
-    <version>1.0</version>
+    <version>1.0.2</version>
+
+    <name>MC-GTAFastTravel</name>
+    <description>A Fast Travel plugin for GTA in Minecraft</description>
+    <url>https://github.com/botmodeengage/MC-GTAFastTravel</url>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 
     <repositories>
         <repository>
@@ -57,7 +60,7 @@
             <groupId>net.citizensnpcs</groupId>
             <artifactId>citizens-main</artifactId>
             <version>2.0.20-SNAPSHOT</version>
-            <scope>provided</scope> <!-- Changed from default to provided -->
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -66,7 +69,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.6.0</version> <!-- Ensure using the latest version -->
+                <version>3.6.0</version>
                 <configuration>
                     <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml</dependencyReducedPomLocation>
                     <relocations>
@@ -91,8 +94,8 @@
     <distributionManagement>
         <repository>
             <id>github</id>
+            <name>GitHub Packages</name>
             <url>https://maven.pkg.github.com/botmodeengage/MC-GTAFastTravel</url>
         </repository>
     </distributionManagement>
-
 </project>
