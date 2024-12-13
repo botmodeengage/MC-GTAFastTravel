@@ -6,7 +6,7 @@
 
     <groupId>com.github.botmodeengage</groupId>
     <artifactId>MC-GTAFastTravel</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.1</version>
 
     <name>MC-GTAFastTravel</name>
     <description>A Fast Travel plugin for GTA in Minecraft</description>
